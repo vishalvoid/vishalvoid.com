@@ -1,5 +1,8 @@
 import "./globals.css";
 import { Space_Grotesk } from "next/font/google";
+import { ThemeProvider } from "next-themes";
+import SiteHeader from "@/components/layouts/site-header";
+import SiteFooter from "@/components/layouts/site-footer";
 
 const font = Space_Grotesk({
   subsets: ["latin"],
@@ -13,7 +16,24 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${font.className}  antialiased`}>{children}</body>
+      <body className={font.className} suppressHydrationWarning>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <a
+            href="#main-content"
+            className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-100 focus:px-4 focus:py-2 focus:bg-background focus:text-foreground focus:ring-2 focus:ring-ring focus:round-md"
+          >
+            Skip to main content
+          </a>
+          <SiteHeader />
+          <main id="main-content">{children}</main>
+          <SiteFooter />
+        </ThemeProvider>
+      </body>
     </html>
   );
 }
