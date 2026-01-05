@@ -1,10 +1,8 @@
 import "./globals.css";
 import { Space_Grotesk } from "next/font/google";
 
-
-
 const font = Space_Grotesk({
-  subsets : ["latin"],
+  subsets: ["latin"],
   variable: "--font-space-grotesk",
 });
 
@@ -15,11 +13,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${font.className}  antialiased`}
-      >
-        {children}
-      </body>
+      <body className={`${font.className}  antialiased`}>{children}</body>
     </html>
   );
 }
