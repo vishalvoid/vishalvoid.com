@@ -34,3 +34,20 @@ export interface DeveloperConfig {
     location: string;
   }>;
 }
+
+export interface Projects {
+  icon: string;
+  title: string;
+  tagline: string;
+  description: Array<string>;
+  liveLink?: string;
+  repo?: string;
+  techStack: Array<TechStack>;
+}
+
+export interface TechStack {
+  name: string;
+  icon: string;
+  hasDarkIcon?: boolean;
+  link?: string;
+}
