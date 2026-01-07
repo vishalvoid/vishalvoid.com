@@ -3,6 +3,7 @@ import { Space_Grotesk } from "next/font/google";
 import { ThemeProvider } from "next-themes";
 import SiteHeader from "@/components/layouts/site-header";
 import SiteFooter from "@/components/layouts/site-footer";
+import { GitHubButtons } from "@/components/ui/extended/github-buttons";
 
 const font = Space_Grotesk({
   subsets: ["latin"],
@@ -32,6 +33,7 @@ export default function RootLayout({
           <SiteHeader />
           <main id="main-content">{children}</main>
           <SiteFooter />
+        
         </ThemeProvider>
       </body>
     </html>

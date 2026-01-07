@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 import ThemeSwitcher from "@/components/ui/extended/theme-switcher";
+import { GitHubButtons } from "../ui/extended/github-buttons";
 
 const SiteHeader = () => {
   return (
@@ -20,7 +21,7 @@ const SiteHeader = () => {
             blog
             <ArrowUpRight size={16} />
           </Link>
-
+          <GitHubButtons />
           <ThemeSwitcher />
         </nav>
       </div>
