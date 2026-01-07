@@ -1,13 +1,13 @@
 import type { DeveloperConfig } from "@/types";
 
 export const DeveloperDetails: DeveloperConfig = {
-  name: "Vishal Kumar Singh",
+  name: "Vishal K. Singh",
   initials: "VKS",
   designation: "Fullstack Developer",
   portfolio: "https://vishalvoid.com",
   email: "tech.vishalkrsingh@gmail.com",
   bio: "Hello People, I'm Vishal Kumar Singh, a fullstack developer from Noida, India with 2+ years of experience building performant, accessible web applications. I specialize in React, Next.js and TypeScript, and I focus on creating maintainable code, thoughtful UX, and reliable backends.",
-  avatar: "/vishal_kumar_singh.webp",
+  avatar: "/vishal_kumar_singh.jpeg",
   resume: "https://vishalvoid.com/vishal_resume.pdf",
   socialLinks: [
     {
