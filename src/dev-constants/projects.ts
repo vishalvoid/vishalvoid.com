@@ -78,4 +78,26 @@ export const ProjectsData: Projects[] = [
       { name: "Rollup", icon: "/tech-icon/rollup.svg" },
     ],
   },
+  {
+    icon: "/projects/focushya.svg",
+    title: "Focushya",
+    tagline: "Time's messy, Focushya isn't",
+    description: [
+      "Full-stack productivity and habit tracking application built with Turborepo monorepo architecture",
+      "RESTful API with JWT authentication, refresh tokens, and secure password hashing using bcrypt",
+      "Task management with daily/upcoming views, timer functionality, and pomodoro focus sessions",
+      "Habit tracking system with custom templates and progress monitoring",
+      "Built with Express.js server, Prisma ORM database layer, and shared TypeScript configurations",
+    ],
+
+    liveLink: "https://focushya.in", // Based on CNAME file in your repo
+    repo: "https://github.com/vishalvoid/focushya",
+    techStack: [
+      { name: "TypeScript", icon: "/tech-icon/typescript.svg" },
+      { name: "Express", icon: "/tech-icon/express.svg" },
+      { name: "Prisma", icon: "/tech-icon/prisma. svg" },
+      { name: "Turborepo", icon: "/tech-icon/turborepo.svg" },
+      { name: "Node.js", icon: "/tech-icon/nodejs.svg" },
+    ],
+  },
 ];
