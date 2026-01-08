@@ -7,7 +7,7 @@ const SiteFooter = () => {
     <footer className="w-full">
       <div className="flex h-24 px-8 md:px-0 max-w-2xl mx-auto items-center justify-between">
         <div className="flex flex-col items-center justify-center w-full space-y-1">
-          <p className="font-medium text-lg text-center">devn</p>
+          <p className="font-medium text-lg text-center">vishalvoid</p>
           <p className="text-sm text-muted-foreground text-center">
             Built by{" "}
             <Link
