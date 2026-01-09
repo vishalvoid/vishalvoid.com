@@ -12,7 +12,7 @@ export const ProjectsData: Projects[] = [
       "Interactive dashboard with Chart.js, ApexCharts, Recharts analytics, geographic visualization, and AWS S3 integration",
     ],
     liveLink: "https://orbit-pms.vercel.app",
-    repo: "https://github.com/nabinkhair42/vtheme",
+    repo: "https://github.com/vishalvoid/pms",
     techStack: [
       { name: "NextJs", icon: "/tech-icon/nextjs.svg" },
       { name: "TypeScript", icon: "/tech-icon/typescript.svg" },
@@ -94,10 +94,30 @@ export const ProjectsData: Projects[] = [
     repo: "https://github.com/vishalvoid/focushya",
     techStack: [
       { name: "TypeScript", icon: "/tech-icon/typescript.svg" },
-      { name: "Express", icon: "/tech-icon/express.svg" },
-      { name: "Prisma", icon: "/tech-icon/prisma. svg" },
+      { name: "Express", icon: "/tech-icon/expressjs.svg", hasDarkIcon: true },
+      { name: "Prisma", icon: "/tech-icon/prisma.svg" },
       { name: "Turborepo", icon: "/tech-icon/turborepo.svg" },
       { name: "Node.js", icon: "/tech-icon/nodejs.svg" },
+    ],
+  },
+  {
+    icon: "/projects/dark-void-theme.png",
+    title: "Dark Void Theme",
+    tagline: "Perfect vs-code dark theme.",
+    description: [
+      "A minimal, high-contrast dark theme for Visual Studio Code inspired by void-like aesthetics",
+      "Carefully tuned color palette for reduced eye strain during long coding sessions",
+      "Consistent syntax highlighting across JavaScript, TypeScript, JSON, HTML, and CSS",
+      "Semantic token colors optimized for readability and visual hierarchy",
+      "Designed for developers who prefer distraction-free, text-first coding environments",
+    ],
+
+    liveLink:
+      "https://marketplace.visualstudio.com/items?itemName=vishalvoid.dark-void-theme",
+    repo: "https://github.com/vishalvoid/dark-void-theme",
+    techStack: [
+      { name: "JSON", icon: "/tech-icon/json.svg" },
+      { name: "VS Code API", icon: "/tech-icon/vscode.svg" },
     ],
   },
 ];

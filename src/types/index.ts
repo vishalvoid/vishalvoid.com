@@ -51,3 +51,15 @@ export interface TechStack {
   hasDarkIcon?: boolean;
   link?: string;
 }
+
+export interface Experience {
+  company: string;
+  logo: string;
+  designation: string;
+  type: "Full-time" | "Part-time" | "Internship" | "Freelance" | "Contract";
+  startDate: string;
+  endDate: string;
+  description: string[];
+  skills: Array<TechStack>;
+  isCurrent: boolean;
+}
