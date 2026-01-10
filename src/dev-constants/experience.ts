@@ -31,7 +31,7 @@ export const ExperienceData: Experience[] = [
       { name: "Prisma", icon: "/tech-icon/prisma.svg", hasDarkIcon: true },
       { name: "Redux Toolkit", icon: "/tech-icon/redux.svg" },
       { name: "Vitest", icon: "/tech-icon/vitest.svg" },
-      { name: "AWS S3", icon: "/tech-icon/aws-s3.svg" },
+      { name: "AWS S3", icon: "/tech-icon/aws.svg", hasDarkIcon: true },
       { name: "MongoDB", icon: "/tech-icon/mongodb.svg" },
       {
         name: "Turborepo",
@@ -94,7 +94,6 @@ export const ExperienceData: Experience[] = [
       { name: "MongoDB", icon: "/tech-icon/mongodb.svg" },
       { name: "PostgreSQL", icon: "/tech-icon/postgresql.svg" },
       { name: "JWT", icon: "/tech-icon/jwt.svg" },
-      { name: "REST APIs", icon: "/tech-icon/rest.svg" },
     ],
   },
 
