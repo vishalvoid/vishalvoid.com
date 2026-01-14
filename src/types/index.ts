@@ -5,6 +5,7 @@ export interface DeveloperConfig {
   portfolio: string;
   email: string;
   phone?: string;
+  github: string;
   bio: string;
   avatar: string;
   resume: string;

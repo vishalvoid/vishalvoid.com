@@ -9,6 +9,7 @@ export const DeveloperDetails: DeveloperConfig = {
   bio: "Hello People, I'm Vishal Kumar Singh, a fullstack developer from Noida, India with 2+ years of experience building performant, accessible web applications. I specialize in React, Next.js and TypeScript, and I focus on creating maintainable code, thoughtful UX, and reliable backends.",
   avatar: "/vishal_kumar_singh.jpeg",
   resume: "https://vishalvoid.com/vishal_resume.pdf",
+  github: "vishalvoid",
   socialLinks: [
     {
       name: "LinkedIn",
