@@ -1,9 +1,10 @@
 import PageShellWrapper from "@/components/layouts/page-shell";
-import DeveloperExperience from "@/components/main/develoepr-experience";
-import DeveloperEducation from "@/components/main/developer-education";
-import DeveloperContributionGraph from "@/components/main/developer-github-contribution";
-import DeveloperIntro from "@/components/main/developer-intro";
-import DeveloperProjects from "@/components/main/developer-projects";
+import DeveloperExperience from "@/components/main/developerExperience";
+import DeveloperEducation from "@/components/main/developerEducation";
+import DeveloperContributionGraph from "@/components/main/developerGithubContribution";
+import DeveloperIntro from "@/components/main/developerIntro";
+import DeveloperProjects from "@/components/main/developerProjects";
+import DeveloperStack from "@/components/main/developerStack";
 
 const page = () => {
   return (
@@ -13,6 +14,7 @@ const page = () => {
       <DeveloperExperience />
       <DeveloperEducation />
       <DeveloperContributionGraph/>
+      <DeveloperStack/>
     </PageShellWrapper>
   );
 };

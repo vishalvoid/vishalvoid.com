@@ -51,6 +51,7 @@ export interface TechStack {
   icon: string;
   hasDarkIcon?: boolean;
   link?: string;
+  category?: "language" | "framework" | "database" | "tools" | "etc";
 }
 
 export interface Experience {
