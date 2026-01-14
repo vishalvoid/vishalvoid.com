@@ -61,20 +61,20 @@ export const DeveloperDetails: DeveloperConfig = {
   },
   education: [
     {
-      degree: "Master of Computer Applications",
+      degree: "Master's of Computer Applications",
       institution: "GLA University",
-      logo: "/gla_university_logo.png",
+      logo: "/education/GLA_University_logo.png",
       startDate: "2024",
       endDate: "2026",
-      location: "Mathura, India",
+      location: "Mathura, Uttar Pradesh, India",
     },
     {
-      degree: "Bachelor of Computer Applications",
+      degree: "Bachelor's of Computer Applications",
       institution: "Glocal University",
-      logo: "/glocal_university_logo.png",
+      logo: "/education/Glocal_University_logo.webp",
       startDate: "2020",
       endDate: "2023",
-      location: "Saharanpur, India",
+      location: "Saharanpur, Uttar Pradesh, India",
     },
   ],
 };
