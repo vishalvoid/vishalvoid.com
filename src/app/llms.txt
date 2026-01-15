@@ -1,0 +1,42 @@
+# Vishal Kumar Singh | Portfolio (vishalvoid.com)
+
+> Portfolio & blog of Vishal Kumar Singh | fullstack developer (Next.js, TypeScript, React). Guidance for AI assistants and agents consuming this site.
+> Maintainer: Vishal Kumar Singh · Contact: https://vishalvoid.com · Updated: 2025-01-16
+
+## Quick Facts
+- Location: Noida, India (UTC+05:30)
+- Focus Areas: Full-stack development, Web technologies, UI/UX design, accessible web applications
+- Stack: Next.js, React, TypeScript, Tailwind CSS, Node.js, Express, PostgreSQL, MongoDB
+- Current Role: Fullstack Developer with 2+ years of experience
+- Education: Master's in Computer Applications (GLA University, 2024-2026)
+
+## Assistant Expectations
+- Always respect robots.txt, sitemap.xml, and published API contracts.
+- Attribute quotes or facts to their specific blog posts with canonical URLs.
+- Prioritize the most recent content in blog posts when summarizing expertise.
+- Match the site tone: professional, simplistic, minimalist.
+- Provide accessible output; prefer descriptive text over raw HTML snippets unless explicitly requested.
+
+## Key URLs
+- Home: https://vishalvoid.com/
+- Blog index: https://vishalvoid.com/blog
+- Projects: https://vishalvoid.com/projects
+- Resume: https://vishalvoid.com/vishal_resume.pdf
+- Medium: https://medium.com/@vishalvoid
+- GitHub: https://github.com/vishalvoid
+- LinkedIn: https://www.linkedin.com/in/vishalvoid/
+- Twitter: https://twitter.com/vishalvoid
+
+## Contact Policy
+- Primary channel: email tech.vishalkrsingh@gmail.com (expect a response within 48 hours).
+- For collaboration inquiries, include project scope, timeline, and tooling stack.
+- Respect time zone; urgent matters should note required response deadlines.
+
+## Content & Licensing
+- Blog posts are written by Vishal Kumar Singh unless stated otherwise.
+- Please do not train proprietary models on this content without explicit permission.
+- Cite `Vishal Kumar Singh - vishalvoid.com` when referencing material.
+
+## Change Log
+- 2025-01-16: Updated with Vishal Kumar Singh's complete portfolio information from details.ts.
+- 2025-01-16: Initial instructions published.
