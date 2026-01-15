@@ -3,7 +3,75 @@ import { Space_Grotesk } from "next/font/google";
 import { ThemeProvider } from "next-themes";
 import SiteHeader from "@/components/layouts/site-header";
 import SiteFooter from "@/components/layouts/site-footer";
-import { GitHubButtons } from "@/components/ui/extended/github-buttons";
+import { DeveloperDetails } from "@/dev-constants/details";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: DeveloperDetails.seo.title,
+  description: DeveloperDetails.seo.description,
+  keywords: DeveloperDetails.seo.keywords,
+  authors: [{ name: DeveloperDetails.name }],
+  creator: DeveloperDetails.name,
+};
+
+const siteUrl = DeveloperDetails.portfolio.replace(/\/$/, "");
+metadata.metadataBase = new URL(siteUrl);
+
+// og image
+const ogImage = `${siteUrl}/og-image.png`;
+
+metadata.openGraph = {
+  title: DeveloperDetails.seo.title,
+  description: DeveloperDetails.seo.description,
+  url: siteUrl,
+  siteName: DeveloperDetails.name,
+  images: [
+    {
+      url: ogImage,
+      width: 1200,
+      height: 630,
+      alt: `${DeveloperDetails.name} | Open Graph Image`,
+    },
+  ],
+  locale: "en_US",
+  type: "website",
+};
+
+metadata.twitter = {
+  card: "summary_large_image",
+  title: DeveloperDetails.seo.title,
+  description: DeveloperDetails.seo.description,
+  images: [ogImage],
+};
+
+const personJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: DeveloperDetails.name,
+  url: siteUrl,
+  image: `${siteUrl}${DeveloperDetails.avatar}`,
+  jobTitle: DeveloperDetails.designation,
+  description: DeveloperDetails.bio,
+  email: `mailto:${DeveloperDetails.email}`,
+  address: {
+    "@type": "PostalAddress",
+    addressLocality: DeveloperDetails.location.city,
+    addressCountry: DeveloperDetails.location.country,
+  },
+  sameAs: DeveloperDetails.socialLinks.map((link) => link.url),
+};
+
+const websiteJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  name: DeveloperDetails.name,
+  url: siteUrl,
+  description: DeveloperDetails.seo.description,
+  author: {
+    "@type": "Person",
+    name: DeveloperDetails.name,
+  },
+};
 
 const font = Space_Grotesk({
   subsets: ["latin"],
@@ -16,7 +84,17 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(personJsonLd) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }}
+        />
+      </head>
       <body className={font.className} suppressHydrationWarning>
         <ThemeProvider
           attribute="class"
@@ -33,7 +111,6 @@ export default function RootLayout({
           <SiteHeader />
           <main id="main-content">{children}</main>
           <SiteFooter />
-        
         </ThemeProvider>
       </body>
     </html>
