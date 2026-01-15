@@ -46,9 +46,8 @@ export const TechStacksList: TechStack[] = [
 
   {
     name: "Vitest",
-    icon: "/tech-icon/expressjs.svg",
+    icon: "/tech-icon/vitest.svg",
     category: "framework",
-    hasDarkIcon: true,
   },
 
   {
@@ -61,7 +60,7 @@ export const TechStacksList: TechStack[] = [
     name: "Recoil",
     icon: "/tech-icon/recoil.svg",
     category: "framework",
-    hasDarkIcon: true
+    hasDarkIcon: true,
   },
 
   {
@@ -80,7 +79,7 @@ export const TechStacksList: TechStack[] = [
     name: "Three Js",
     icon: "/tech-icon/threejs.svg",
     category: "framework",
-    hasDarkIcon: true
+    hasDarkIcon: true,
   },
 
   {
@@ -112,12 +111,14 @@ export const TechStacksList: TechStack[] = [
     name: "Drizzle",
     icon: "/tech-icon/drizzle.svg",
     category: "database",
+    hasDarkIcon: true,
   },
 
   {
     name: "Linux",
-    icon: "/tech-icon/Linux.svg",
+    icon: "/tech-icon/linux.svg",
     category: "tools",
+    hasDarkIcon: true,
   },
 
   {
@@ -129,12 +130,6 @@ export const TechStacksList: TechStack[] = [
   {
     name: "VS Code",
     icon: "/tech-icon/vscode.svg",
-    category: "tools",
-  },
-
-  {
-    name: "Linux",
-    icon: "/tech-icon/Linux.svg",
     category: "tools",
   },
 
@@ -153,14 +148,15 @@ export const TechStacksList: TechStack[] = [
 
   {
     name: "Redis",
-    icon: "/tech-icon/redix.svg",
+    icon: "/tech-icon/redis.svg",
     category: "etc",
   },
 
   {
-    name: "WS",
+    name: "WebSocket",
     icon: "/tech-icon/ws.svg",
     category: "etc",
+    hasDarkIcon: true,
   },
 
   {
@@ -173,9 +169,10 @@ export const TechStacksList: TechStack[] = [
     name: "gRPC",
     icon: "/tech-icon/grpc.svg",
     category: "etc",
+    hasDarkIcon: true,
   },
 
-    {
+  {
     name: "Vercel",
     icon: "/tech-icon/vercel.svg",
     hasDarkIcon: true,

@@ -5,6 +5,7 @@ import DeveloperContributionGraph from "@/components/main/developerGithubContrib
 import DeveloperIntro from "@/components/main/developerIntro";
 import DeveloperProjects from "@/components/main/developerProjects";
 import DeveloperStack from "@/components/main/developerStack";
+import DeveloperConnect from "@/components/main/developerConnect";
 
 const page = () => {
   return (
@@ -13,8 +14,9 @@ const page = () => {
       <DeveloperProjects />
       <DeveloperExperience />
       <DeveloperEducation />
-      <DeveloperContributionGraph/>
-      <DeveloperStack/>
+      <DeveloperContributionGraph />
+      <DeveloperStack />
+      <DeveloperConnect />
     </PageShellWrapper>
   );
 };
