@@ -6,6 +6,7 @@ import DeveloperIntro from "@/components/main/developerIntro";
 import DeveloperProjects from "@/components/main/developerProjects";
 import DeveloperStack from "@/components/main/developerStack";
 import DeveloperConnect from "@/components/main/developerConnect";
+import DeveloperBlog from "@/components/main/developerBlog";
 
 const page = () => {
   return (
@@ -16,6 +17,7 @@ const page = () => {
       <DeveloperEducation />
       <DeveloperContributionGraph />
       <DeveloperStack />
+      <DeveloperBlog />
       <DeveloperConnect />
     </PageShellWrapper>
   );

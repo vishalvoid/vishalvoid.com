@@ -11,7 +11,7 @@ export const ProjectsData: Projects[] = [
       "Turborepo monorepo with 100% test coverage via Vitest, production-ready security middleware (Helmet, rate limiting)",
       "Interactive dashboard with Chart.js, ApexCharts, Recharts analytics, geographic visualization, and AWS S3 integration",
     ],
-    liveLink: "https://orbit-pms.vercel.app",
+    // liveLink: "https://orbit-pms.vercel.app",
     repo: "https://github.com/vishalvoid/pms",
     techStack: [
       { name: "NextJs", icon: "/tech-icon/nextjs.svg" },
@@ -90,7 +90,7 @@ export const ProjectsData: Projects[] = [
       "Built with Express.js server, Prisma ORM database layer, and shared TypeScript configurations",
     ],
 
-    liveLink: "https://focushya.in", // Based on CNAME file in your repo
+    liveLink: "https://focushya.com", // Based on CNAME file in your repo
     repo: "https://github.com/vishalvoid/focushya",
     techStack: [
       { name: "TypeScript", icon: "/tech-icon/typescript.svg" },
