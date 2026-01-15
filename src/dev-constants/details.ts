@@ -1,7 +1,7 @@
 import type { DeveloperConfig } from "@/types";
 
 export const DeveloperDetails: DeveloperConfig = {
-  name: "Vishal K. Singh",
+  name: "Vishal Kr. Singh",
   initials: "VKS",
   designation: "Fullstack Developer",
   portfolio: "https://vishalvoid.com",
