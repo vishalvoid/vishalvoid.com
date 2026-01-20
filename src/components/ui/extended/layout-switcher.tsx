@@ -1,12 +1,12 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-import { useSidebarOptional } from "@/lib/sidebar-provider";
 import { Columns2, Columns3 } from "lucide-react";
+import { useSidebarOptional } from "@/lib/sidebar-provider";
 
 const LayoutSwitcher = () => {
   const ctx = useSidebarOptional();
-  const enabled = ctx?.enabled ?? true;
+  const enabled = ctx?.enabled ?? false;
   const toggle = ctx?.toggle ?? (() => {});
 
   return (
@@ -17,13 +17,11 @@ const LayoutSwitcher = () => {
       aria-label={enabled ? "Hide sidebar" : "Show sidebar"}
       title={enabled ? "Hide sidebar" : "Show sidebar"}
       aria-pressed={enabled}
-      className="rounded-full"
+      className="rounded-full transition-transform motion-reduce:transition-none"
     >
-      {enabled ? (
-        <Columns3 className="h-5 w-5" />
-      ) : (
-        <Columns2 className="h-5 w-5" />
-      )}
+      <span className={`transform transition-transform duration-300 ${enabled ? "rotate-90" : "rotate-0"}`}>
+        {enabled ? <Columns3 className="h-5 w-5" /> : <Columns2 className="h-5 w-5" />}
+      </span>
     </Button>
   );
 };
