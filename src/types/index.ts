@@ -65,3 +65,9 @@ export interface Experience {
   skills: Array<TechStack>;
   isCurrent: boolean;
 }
+
+export type SidebarContextType = {
+  enabled: boolean;
+  setEnabled: (v: boolean) => void;
+  toggle: () => void;
+};
