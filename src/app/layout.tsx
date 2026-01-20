@@ -5,6 +5,8 @@ import SiteHeader from "@/components/layouts/site-header";
 import SiteFooter from "@/components/layouts/site-footer";
 import { DeveloperDetails } from "@/dev-constants/details";
 import { Metadata } from "next";
+import { SidebarProvider } from "@/lib/sidebar-provider";
+import SidebarWrapper from "@/components/layouts/sidebar-wrapper";
 
 export const metadata: Metadata = {
   title: DeveloperDetails.seo.title,
@@ -108,9 +110,15 @@ export default function RootLayout({
           >
             Skip to main content
           </a>
-          <SiteHeader />
-          <main id="main-content">{children}</main>
-          <SiteFooter />
+          <SidebarProvider>
+            <SidebarWrapper>
+              <SiteHeader />
+              <main id="main-content" className="min-h-[70vh]">
+                {children}
+              </main>
+              <SiteFooter />
+            </SidebarWrapper>
+          </SidebarProvider>
         </ThemeProvider>
       </body>
     </html>
