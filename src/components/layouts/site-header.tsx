@@ -1,7 +1,8 @@
 import Link from "next/link";
-import { ArrowUpRight } from "lucide-react";
+import { ArrowUpRight, Columns3, PanelLeftDashed } from "lucide-react";
 import ThemeSwitcher from "@/components/ui/extended/theme-switcher";
 import { GitHubButtons } from "../ui/extended/github-buttons";
+import LayoutSwitcher from "../ui/extended/layout-switcher";
 
 const SiteHeader = () => {
   return (
@@ -23,6 +24,8 @@ const SiteHeader = () => {
           </Link>
           <GitHubButtons />
           <ThemeSwitcher />
+          <div> | </div>
+          <LayoutSwitcher />
         </nav>
       </div>
     </header>
