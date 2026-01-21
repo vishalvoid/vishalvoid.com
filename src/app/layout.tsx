@@ -7,6 +7,7 @@ import { DeveloperDetails } from "@/dev-constants/details";
 import { Metadata } from "next";
 import { SidebarProvider } from "@/lib/sidebar-provider";
 import SidebarWrapper from "@/components/layouts/sidebar-wrapper";
+import PageTransition from "@/components/ui/extended/page-transition";
 
 export const metadata: Metadata = {
   title: DeveloperDetails.seo.title,
@@ -98,28 +99,24 @@ export default function RootLayout({
         />
       </head>
       <body className={font.className} suppressHydrationWarning>
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-          disableTransitionOnChange
-        >
-          <a
-            href="#main-content"
-            className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-100 focus:px-4 focus:py-2 focus:bg-background focus:text-foreground focus:ring-2 focus:ring-ring focus:round-md"
-          >
-            Skip to main content
-          </a>
-          <SidebarProvider>
-            <SidebarWrapper>
+        <SidebarProvider>
+          <SidebarWrapper>
+            <ThemeProvider attribute="class" defaultTheme="light" enableSystem>
+              <a
+                href="#main-content"
+                className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-background focus:text-foreground focus:ring-2 focus:ring-ring focus:rounded-md"
+              >
+                Skip to main content
+              </a>
+
               <SiteHeader />
               <main id="main-content" className="min-h-[70vh]">
-                {children}
+                <PageTransition>{children}</PageTransition>
               </main>
               <SiteFooter />
-            </SidebarWrapper>
-          </SidebarProvider>
-        </ThemeProvider>
+            </ThemeProvider>
+          </SidebarWrapper>
+        </SidebarProvider>
       </body>
     </html>
   );

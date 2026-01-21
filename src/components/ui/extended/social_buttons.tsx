@@ -3,7 +3,6 @@
 import { Button } from "@/components/ui/button";
 import ThemedIcon from "@/components/ui/extended/themed-icon";
 import { DeveloperDetails } from "@/dev-constants/details";
-import { Github, Twitter, Linkedin } from "lucide-react";
 
 export const GitHubButtons = () => {
   const handleClick = () => {
@@ -18,27 +17,14 @@ export const GitHubButtons = () => {
       aria-label="View GitHub profile"
       title="GitHub"
     >
-      <Github className="h-5 w-5 text-foreground" />
+      <ThemedIcon
+        src="/social/github.svg"
+        alt="GitHub"
+        size={20}
+        hasDarkVariant
+        className="h-5 w-5"
+      />
     </Button>
-  );
-};
-
-export const SocialIcon = ({
-  index,
-  size = 20,
-}: {
-  index: number;
-  size?: number;
-}) => {
-  const info = DeveloperDetails.socialLinks[index];
-  return (
-    <ThemedIcon
-      src={info.icon}
-      alt={info.name}
-      size={size}
-      hasDarkVariant={info.hasDarkIcon}
-      className="filter grayscale brightness-0 dark:invert"
-    />
   );
 };
 
@@ -55,7 +41,13 @@ export const LinkedInButton = () => {
       aria-label="View LinkedIn profile"
       title="LinkedIn"
     >
-      <Linkedin className="h-5 w-5 text-foreground" />
+      <ThemedIcon
+        src={DeveloperDetails.socialLinks[0].icon}
+        alt={DeveloperDetails.socialLinks[0].name}
+        size={20}
+        hasDarkVariant={DeveloperDetails.socialLinks[0].hasDarkIcon}
+        className="h-5 w-5"
+      />
     </Button>
   );
 };
@@ -71,9 +63,15 @@ export const TwitterButton = () => {
       className="rounded-full"
       onClick={handleClick}
       aria-label="View Twitter profile"
-      title="Twitter"
+      title="X"
     >
-      <Twitter className="h-5 w-5 text-foreground" />
+      <ThemedIcon
+        src={DeveloperDetails.socialLinks[2].icon}
+        alt={DeveloperDetails.socialLinks[2].name}
+        size={20}
+        hasDarkVariant={DeveloperDetails.socialLinks[2].hasDarkIcon}
+        className="h-5 w-5"
+      />
     </Button>
   );
 };
@@ -96,7 +94,7 @@ export const MediumButton = () => {
         alt={DeveloperDetails.socialLinks[3].name}
         size={20}
         hasDarkVariant={DeveloperDetails.socialLinks[3].hasDarkIcon}
-        className="filter grayscale brightness-0 dark:invert"
+        className="h-5 w-5"
       />
     </Button>
   );
