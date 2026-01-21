@@ -1,6 +1,7 @@
 import { DeveloperDetails } from "@/dev-constants/details";
 import Image from "next/image";
 import ShellWrapper from "../layouts/shell-wrapper";
+import RandomBanner from "@/components/ui/extended/random-banner";
 
 const DeveloperIntro = () => {
   const { name, designation, bio, avatar } = DeveloperDetails;
@@ -32,16 +33,44 @@ const DeveloperIntro = () => {
         </div>
       </div> */}
 
-      <div>
-       <div>
-        <Image
-          src={avatar}
-          alt={name}
-          width={1000}
-          height={1000}
-          className="w-full md:h-32 md:w-32 md:mt-2.5 shrink-0 rounded border object-cover shadow-md overflow-hidden"
-        />
-       </div>
+      <div className="bg-[repeating-linear-gradient(-45deg,var(--color-border),var(--color-border)_1px,transparent_1px,transparent_6px)]">
+        <RandomBanner className="w-full rounded overflow-hidden " />
+
+        <div className="flex justify-between px-4 pt-4 pb-0 ">
+          {" "}
+          {/* left name/designation — hidden on very small screens */}
+          <div className="space-y-2 hidden sm:block">
+            <div className="space-y-1">
+              <h1 className="mt-1 text-3xl font-medium tracking-tight text-foreground md:text-4xl">
+                {name}
+              </h1>
+              <p className="text-sm uppercase tracking-[0.2em] text-muted-foreground">
+                {designation}
+              </p>
+            </div>
+          </div>
+          <div className="w-full ml-4 lg:ml-0 flex justify-center md:justify-end md:w-auto">
+            <Image
+              src={avatar}
+              alt={name}
+              width={1000}
+              height={1000}
+              className="h-28 w-28  border-4 border-white md:h-32 md:w-32 shrink-0   object-cover shadow-md overflow-hidden -mt-8 sm:-mt-10 md:-mt-16 relative z-30"
+            />
+          </div>
+        </div>
+
+        {/* small-screen centered name/designation below photo */}
+        <div className="sm:hidden text-center mt-3">
+          <h2 className="text-3xl font-medium">{name}</h2>
+          <p className="text-sm uppercase tracking-[0.2em] text-muted-foreground">
+            {designation}
+          </p>
+        </div>
+
+        <p className="text-base p-4 leading-relaxed text-justify text-muted-foreground  mb-0">
+          {bio}
+        </p>
       </div>
     </ShellWrapper>
   );
