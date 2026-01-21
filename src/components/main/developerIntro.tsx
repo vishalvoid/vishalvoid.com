@@ -7,7 +7,7 @@ const DeveloperIntro = () => {
 
   return (
     <ShellWrapper>
-      <div className="relative p-2 bg-[repeating-linear-gradient(-45deg,var(--color-border),var(--color-border)_1px,transparent_1px,transparent_6px)]">
+      {/* <div className="relative p-2 bg-[repeating-linear-gradient(-45deg,var(--color-border),var(--color-border)_1px,transparent_1px,transparent_6px)]">
         <div className=" flex flex-col md:flex-row md:justify-between md:space-x-3 space-y-3 md:space-y-0 ">
           <Image
             src={avatar}
@@ -30,6 +30,18 @@ const DeveloperIntro = () => {
             </p>
           </div>
         </div>
+      </div> */}
+
+      <div>
+       <div>
+        <Image
+          src={avatar}
+          alt={name}
+          width={1000}
+          height={1000}
+          className="w-full md:h-32 md:w-32 md:mt-2.5 shrink-0 rounded border object-cover shadow-md overflow-hidden"
+        />
+       </div>
       </div>
     </ShellWrapper>
   );

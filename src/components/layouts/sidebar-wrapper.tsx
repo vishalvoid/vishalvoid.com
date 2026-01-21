@@ -226,7 +226,7 @@ const SidebarWrapper: React.FC<{ children: React.ReactNode }> = ({
 
               <div className="flex items-center justify-center mt-4">
                 <span className="font-medium text-gray-700 text-[10px] tracking-wider">
-                  Cordinates : 28.62° N, 77.37° E
+                  28.62° N, 77.37° E
                 </span>
               </div>
             </div>

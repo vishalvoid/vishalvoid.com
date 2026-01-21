@@ -103,7 +103,7 @@ const SiteHeader = () => {
             <div className="hidden xl:flex">
               <LayoutSwitcher />
             </div>
-            <div className="md:hidden">
+            <div className="lg:hidden">
               <button
                 aria-label="Open navigation"
                 className="p-2 rounded-md hover:bg-slate-100 dark:hover:bg-slate-800"
