@@ -1,6 +1,12 @@
 "use client";
 
-import React, { createContext, useContext, useEffect, useState } from "react";
+import React, {
+  createContext,
+  useContext,
+  useEffect,
+  useLayoutEffect,
+  useState,
+} from "react";
 
 type SidebarContextType = {
   enabled: boolean;
@@ -15,21 +21,29 @@ export const SidebarProvider = ({
 }: {
   children: React.ReactNode;
 }) => {
-  const [enabled, setEnabled] = useState<boolean>(() => {
-    if (typeof window === "undefined") return false;
+  const [enabled, setEnabled] = useState<boolean>(false); // default false
+  const [mounted, setMounted] = useState(false);
+
+  // Read localStorage BEFORE paint to avoid flash
+  useLayoutEffect(() => {
     try {
       const raw = localStorage.getItem("sidebarEnabled");
-      return raw !== null ? JSON.parse(raw) : false; // default: false (header visible)
+      const value = raw !== null ? JSON.parse(raw) : false;
+      setEnabled(value);
     } catch {
-      return false;
+      setEnabled(false);
     }
-  });
+    setMounted(true);
+  }, []);
 
+  // Persist to localStorage when changed
   useEffect(() => {
-    try {
-      localStorage.setItem("sidebarEnabled", JSON.stringify(enabled));
-    } catch {}
-  }, [enabled]);
+    if (mounted) {
+      try {
+        localStorage.setItem("sidebarEnabled", JSON.stringify(enabled));
+      } catch {}
+    }
+  }, [enabled, mounted]);
 
   const toggle = () => setEnabled((v) => !v);
 
