@@ -5,15 +5,12 @@ import ThemeSwitcher from "@/components/ui/extended/theme-switcher";
 import { GitHubButtons } from "@/components/ui/extended/social_buttons";
 import LayoutSwitcher from "@/components/ui/extended/layout-switcher";
 import {
-  Home,
-  BriefcaseBusiness,
-  LayoutGrid,
-  Notebook,
-  PencilLine,
+
   SquareTerminal,
 } from "lucide-react";
 import { useSidebarOptional } from "@/lib/sidebar-provider";
 import { usePathname } from "next/navigation";
+import Typewriter from "@/components/ui/extended/typewriter";
 
 const SiteHeader = () => {
   const ctx = useSidebarOptional();
@@ -22,7 +19,6 @@ const SiteHeader = () => {
   const pathname = usePathname();
 
   const nav = [
-    { href: "/", label: "Home" },
     { href: "/work", label: "Work" },
     { href: "/projects", label: "Projects" },
     { href: "/guestbook", label: "Guestbook" },
@@ -41,7 +37,40 @@ const SiteHeader = () => {
       >
         <div className="flex h-14 px-8 md:px-0 max-w-2xl mx-auto items-center justify-between">
           <div className="flex items-center space-x-4">
-            <nav className="hidden md:flex items-center gap-2">
+            {/* show logo + name + Typewriter between sm and lg */}
+            <div className="hidden sm:flex lg:hidden items-center gap-3">
+              <SquareTerminal className="h-7 w-7 text-foreground" />
+              <Typewriter
+                texts={["Vishal Kr. Singh", "@vishalvoid"]}
+                speed={60}
+                pause={1800}
+                className="text-sm text-white"
+              />
+            </div>
+
+            {/* show only the logo between lg and xl (no name/Typewriter) */}
+            <div className="hidden lg:flex xl:hidden items-center">
+              <Link
+                href="/"
+                aria-label="Home"
+                className="p-1 rounded hover:bg-slate-100 dark:hover:bg-slate-800"
+              >
+                <SquareTerminal className="h-8 w-8 text-foreground" />
+              </Link>
+            </div>
+
+            {/* on very small screens show only the logo (no name) */}
+            <div className="sm:hidden">
+              <Link
+                href="/"
+                aria-label="Home"
+                className="p-1 rounded hover:bg-slate-100 dark:hover:bg-slate-800"
+              >
+                <SquareTerminal className="h-7 w-7 text-foreground" />
+              </Link>
+            </div>
+
+            <nav className="hidden lg:flex items-center gap-2">
               {nav.map((item) => {
                 const isActive =
                   pathname === item.href ||
@@ -56,11 +85,7 @@ const SiteHeader = () => {
                         : "text-muted-foreground hover:text-foreground"
                     }`}
                   >
-                    {item.href === "/" ? (
-                      <SquareTerminal className="h-5 w-5" />
-                    ) : (
-                      item.label
-                    )}
+                    {item.label}
                   </Link>
                 );
               })}
