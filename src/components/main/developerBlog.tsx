@@ -16,8 +16,17 @@ import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { ArrowUpRight, Clock } from "lucide-react";
 
+type BlogPost = {
+  title: string;
+  link: string;
+  pubDate: string;
+  thumbnail?: string;
+  content: string;
+  description?: string;
+};
+
 const DeveloperBlog = () => {
-  const [posts, setPosts] = useState([]);
+  const [posts, setPosts] = useState<BlogPost[]>([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -25,7 +34,7 @@ const DeveloperBlog = () => {
       try {
         // Using RSS2JSON API to fetch Medium posts
         const response = await fetch(
-          `https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@vishalvoid`
+          `https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@vishalvoid`,
         );
         const data = await response.json();
 
@@ -42,14 +51,14 @@ const DeveloperBlog = () => {
     fetchMediumPosts();
   }, []);
 
-  const getReadingTime = (content) => {
+  const getReadingTime = (content: string) => {
     const wordsPerMinute = 200;
-    const text = content.replace(/<[^>]*>/g, "");
-    const wordCount = text.split(/\s+/).length;
+    const text = String(content).replace(/<[^>]*>/g, "");
+    const wordCount = text.trim() ? text.split(/\s+/).length : 0;
     return Math.ceil(wordCount / wordsPerMinute);
   };
 
-  const formatDate = (dateString) => {
+  const formatDate = (dateString: string) => {
     const date = new Date(dateString);
     return date.toLocaleDateString("en-US", {
       month: "short",
@@ -58,9 +67,9 @@ const DeveloperBlog = () => {
     });
   };
 
-  const extractImageFromContent = (content) => {
-    const imgRegex = /<img[^>]+src="([^">]+)"/;
-    const match = content.match(imgRegex);
+  const extractImageFromContent = (content: string) => {
+    const imgRegex = /<img[^>]+src="([^"]+)"/;
+    const match = String(content).match(imgRegex);
     return match ? match[1] : null;
   };
 
@@ -68,7 +77,6 @@ const DeveloperBlog = () => {
     return (
       <ShellWrapper>
         <div className="relative overflow-hidden p-2 space-y-6">
-         
           <div className="grid gap-4 grid-cols-1 sm:grid-cols-2">
             {[...Array(6)].map((_, i) => (
               <div
@@ -85,10 +93,8 @@ const DeveloperBlog = () => {
   return (
     <ShellWrapper>
       <div className="relative overflow-hidden p-2 space-y-6">
-     
-
         <div className="grid gap-4 grid-cols-1 sm:grid-cols-2">
-          {posts.map((post, index) => {
+          {posts.map((post: BlogPost, index: number) => {
             const thumbnail =
               extractImageFromContent(post.content) || post.thumbnail;
             const readingTime = getReadingTime(post.content);
@@ -148,8 +154,6 @@ const DeveloperBlog = () => {
             );
           })}
         </div>
-
-      
       </div>
     </ShellWrapper>
   );

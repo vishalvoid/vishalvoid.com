@@ -2,8 +2,8 @@ import type { Projects } from "@/types";
 
 export const ProjectsData: Projects[] = [
   {
-    icon: "/projects/orbit.svg",
-    title: "Orbit",
+    icon: "/projects/pms.svg",
+    title: "Project Management System",
     tagline: "Revolving Around Organized Workflow",
     description: [
       "Full-stack project management platform with TypeScript, Express.js, Prisma ORM, PostgreSQL, and JWT authentication",
