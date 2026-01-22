@@ -17,7 +17,7 @@ export default function RandomBanner({ className = "" }: RandomBannerProps) {
     setN(idx);
   }, []);
 
-  const heightClasses = "h-44 sm:h-56 md:h-72 lg:h-80 xl:h-80";
+  const heightClasses = "h-52 sm:h-56 md:h-72 lg:h-80 xl:h-80";
 
   if (n === null) {
     // show placeholder immediately to reserve space and avoid layout shift

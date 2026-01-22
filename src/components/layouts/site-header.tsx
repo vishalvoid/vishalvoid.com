@@ -49,7 +49,7 @@ const SiteHeader = () => {
             </div>
 
             {/* show only the logo between lg and xl (no name/Typewriter) */}
-            <div className="hidden lg:flex xl:hidden items-center">
+            <div className="hidden lg:flex items-center">
               <Link
                 href="/"
                 aria-label="Home"
