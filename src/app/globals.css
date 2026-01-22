@@ -173,3 +173,26 @@ html:not(.dark) .shiki span {
     scroll-behavior: auto !important;
   }
 }
+
+
+.wavy-inline {
+  position: relative;
+  display: inline-block;
+  padding-bottom: 2px; 
+}
+
+.wavy-inline::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 6px;
+  bottom: -3px;
+  pointer-events: none;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='40' height='6' viewBox='0 0 40 6'><path d='M0 3 C2.5 0 5 6 7.5 3 C10 0 12.5 6 15 3 C17.5 0 20 6 22.5 3 C25 0 27.5 6 30 3 C32.5 0 35 6 37.5 3 C40 0 40 6 40 3' fill='none' stroke='%232563EB' stroke-width='1.6' stroke-linecap='round' /></svg>");
+  background-repeat: repeat-x;
+  background-size: auto 6px;
+  opacity: 1;
+}
+
+
