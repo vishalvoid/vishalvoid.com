@@ -41,8 +41,11 @@ export interface Projects {
   title: string;
   tagline: string;
   description: Array<string>;
+  shortDescription?: Array<string>;
   liveLink?: string;
+  gif?: string;
   repo?: string;
+  banner?: string;
   techStack: Array<TechStack>;
 }
 

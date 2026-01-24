@@ -60,27 +60,8 @@ const DeveloperProjects = () => {
               </ExpandableSectionTrigger>
 
               <ExpandableSectionContent>
-                <ul className="space-y-2 text-sm leading-relaxed text-muted-foreground">
-                  {project.description.map((line) => (
-                    <li key={line} className="flex">
-                      <DotIcon />
-                      <span>{line}</span>
-                    </li>
-                  ))}
-                </ul>
-                {project.techStack && (
-                  <div className="flex flex-wrap gap-2">
-                    {project.techStack.map((tech) => (
-                      <StackBadge
-                        key={tech.name}
-                        name={tech.name}
-                        icon={tech.icon}
-                        hasDarkIcon={tech.hasDarkIcon}
-                      />
-                    ))}
-                  </div>
-                )}
-                <div className="flex flex-wrap gap-2 pt-2">
+                {/* Action buttons aligned to the top-right */}
+                <div className="flex items-start justify-start gap-2 mb-4 w-full">
                   <Button asChild size="sm" variant="outline">
                     <Link
                       href={`/projects/${project.title
@@ -119,6 +100,45 @@ const DeveloperProjects = () => {
                     </Button>
                   )}
                 </div>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-sm leading-relaxed text-muted-foreground">
+                  {/* Right: horizontal project image (no rounded corners) */}
+                  <div className="w-full flex items-center justify-center">
+                    <Image
+                      src={project.banner || project.gif || project.icon}
+                      alt={`${project.title} preview`}
+                      width={1200}
+                      height={600}
+                      className="w-full h-40 md:h-48 object-cover border border-border"
+                    />
+                  </div>
+                  {/* Left: description + tech stack */}
+                  <div className="space-y-3 pr-0 md:pr-6 border-t md:border-t-0 md:border-r md:border-border/40">
+                    <div className="space-y-2">
+                      {project.shortDescription?.map((line) => (
+                        <p key={line} className="text-sm text-muted-foreground">
+                          {line}
+                        </p>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+
+                {/* Tech stack full width */}
+                {project.techStack && (
+                  <div className="w-full mt-4">
+                    <div className="flex flex-wrap gap-2">
+                      {project.techStack.map((tech) => (
+                        <StackBadge
+                          key={tech.name}
+                          name={tech.name}
+                          icon={tech.icon}
+                          hasDarkIcon={tech.hasDarkIcon}
+                        />
+                      ))}
+                    </div>
+                  </div>
+                )}
               </ExpandableSectionContent>
             </ExpandableSectionItem>
           ))}

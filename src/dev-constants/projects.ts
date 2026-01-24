@@ -3,6 +3,7 @@ import type { Projects } from "@/types";
 export const ProjectsData: Projects[] = [
   {
     icon: "/projects/pms.svg",
+    gif: "/projects/pms/pms.gif",
     title: "Project Management System",
     tagline: "Revolving Around Organized Workflow",
     description: [
@@ -10,6 +11,12 @@ export const ProjectsData: Projects[] = [
       "Employee, project, and client management with role-based access control, RESTful API, and automated validation using Zod",
       "Turborepo monorepo with 100% test coverage via Vitest, production-ready security middleware (Helmet, rate limiting)",
       "Interactive dashboard with Chart.js, ApexCharts, Recharts analytics, geographic visualization, and AWS S3 integration",
+    ],
+    shortDescription: [
+      "SaaS platform for managing projects and teams",
+      "Role-based access control for secure collaboration",
+      "Scalable monorepo architecture with automated testing",
+      "Interactive analytics dashboards with cloud storage",
     ],
     // liveLink: "https://orbit-pms.vercel.app",
     repo: "https://github.com/vishalvoid/pms",
@@ -37,6 +44,7 @@ export const ProjectsData: Projects[] = [
   },
   {
     icon: "/projects/rabrees.png",
+    gif: "/projects/pms/pms.gif",
     title: "Rabrees",
     tagline: "A Complete eCommerce with Admin Dashboard",
     description: [
@@ -45,6 +53,13 @@ export const ProjectsData: Projects[] = [
       "Modern responsive UI with Tailwind CSS, Flowbite components, interactive carousels, and animated transitions",
       "Admin dashboard with Chart.js analytics for product management, order tracking, and business insights",
     ],
+    shortDescription: [
+      "Full-stack e-commerce platform with modern stack",
+      "Secure payments, notifications, and cloud storage",
+      "Responsive, animated storefront user experience",
+      "Analytics-driven admin panel for business insights",
+    ],
+
     liveLink: "https://rabrees.vercel.app",
     techStack: [
       { name: "Next.js", icon: "/tech-icon/nextjs.svg", hasDarkIcon: true },
@@ -68,6 +83,12 @@ export const ProjectsData: Projects[] = [
       "Dual build system (ESM + CommonJS) using Rollup bundler",
       "Published as @vishalvoid/react-india-map with TypeScript and React",
     ],
+    shortDescription: [
+      "Open-source React map NPM package",
+      "Interactive India map with rich tooltips",
+      "Dual-format builds using Rollup bundler",
+      "Type-safe package published on NPM",
+    ],
 
     liveLink: "https://www.npmjs.com/package/@vishalvoid/react-india-map",
     repo: "https://github.com/vishalvoid/react-india-map",
@@ -89,6 +110,12 @@ export const ProjectsData: Projects[] = [
       "Habit tracking system with custom templates and progress monitoring",
       "Built with Express.js server, Prisma ORM database layer, and shared TypeScript configurations",
     ],
+    shortDescription: [
+      "Full-stack productivity app with monorepo architecture",
+      "JWT authentication and secure password hashing",
+      "Task management with pomodoro timer",
+      "Customizable habit tracking system",
+    ],
 
     liveLink: "https://focushya.com", // Based on CNAME file in your repo
     repo: "https://github.com/vishalvoid/focushya",
@@ -102,6 +129,7 @@ export const ProjectsData: Projects[] = [
   },
   {
     icon: "/projects/dark-void-theme.png",
+    gif: "/projects/pms/pms.gif",
     title: "Dark Void Theme",
     tagline: "Perfect vs-code dark theme.",
     description: [
@@ -110,6 +138,14 @@ export const ProjectsData: Projects[] = [
       "Consistent syntax highlighting across JavaScript, TypeScript, JSON, HTML, and CSS",
       "Semantic token colors optimized for readability and visual hierarchy",
       "Designed for developers who prefer distraction-free, text-first coding environments",
+    ],
+
+    shortDescription: [
+      "Minimal, high-contrast dark theme for VS Code",
+      "Carefully tuned color palette for reduced eye strain",
+      "Consistent syntax highlighting across multiple languages",
+      "Optimized semantic token colors for readability",
+      "Distraction-free, text-first coding environment",
     ],
 
     liveLink:
