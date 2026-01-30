@@ -44,6 +44,7 @@ export interface Projects {
   shortDescription?: Array<string>;
   liveLink?: string;
   gif?: string;
+  lottie?: string,
   repo?: string;
   banner?: string;
   techStack: Array<TechStack>;

@@ -13,6 +13,7 @@ import {
 } from "../ui/extended/expandable-section";
 import { ProjectsData } from "@/dev-constants/projects";
 import Image from "next/image";
+import LottiePlayer from "@/components/ui/extended/lottie-player";
 import { DotIcon, Globe, ArrowUpRight, Github } from "lucide-react";
 import { Button } from "../ui/button";
 import ThemedIcon from "../ui/extended/themed-icon";
@@ -104,13 +105,23 @@ const DeveloperProjects = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-sm leading-relaxed text-muted-foreground">
                   {/* Right: horizontal project image (no rounded corners) */}
                   <div className="w-full flex items-center justify-center">
-                    <Image
-                      src={project.banner || project.gif || project.icon}
-                      alt={`${project.title} preview`}
-                      width={1200}
-                      height={600}
-                      className="w-full h-40 md:h-48 object-cover border border-border"
-                    />
+                    {project.lottie ? (
+                      <LottiePlayer
+                        src={project.lottie}
+                        className="w-full h-40 md:h-48 object-cover border border-border"
+                        fallbackSrc={
+                          project.banner || project.gif || project.icon
+                        }
+                      />
+                    ) : (
+                      <Image
+                        src={project.banner || project.gif || project.icon}
+                        alt={`${project.title} preview`}
+                        width={400}
+                        height={220}
+                        className="w-full h-40 md:h-48 object-fit border border-border"
+                      />
+                    )}
                   </div>
                   {/* Left: description + tech stack */}
                   <div className="space-y-3 pr-0 md:pr-6 border-t md:border-t-0 md:border-r md:border-border/40">
