@@ -28,6 +28,7 @@ import {
 } from "@/components/ui/extended/github-buttons";
 import ThemedIcon from "../ui/extended/themed-icon";
 import ThemeSwitcher from "../ui/extended/theme-switcher";
+import { DeveloperDetails } from "@/dev-constants/details";
 
 const SidebarWrapper: React.FC<{ children: React.ReactNode }> = ({
   children,
@@ -44,8 +45,10 @@ const SidebarWrapper: React.FC<{ children: React.ReactNode }> = ({
     { href: "/blog", label: "Blog", icon: PencilLine, index: "04" },
   ];
 
+  const { name } = DeveloperDetails;
+
   return (
-    <div className="h-screen w-screen lg:max-w-[1920] md:mx-auto flex bg-background text-foreground border">
+    <div className="h-screen w-screen lg:max-w-[1920] md:mx-auto flex bg-background text-foreground">
       <aside
         className={`hidden lg:flex flex-col justify-between w-full gap-4 lg:h-screen transition-all duration-300 border-r border-gray-200 dark:border-slate-700 bg-background ${
           enabled
@@ -61,7 +64,7 @@ const SidebarWrapper: React.FC<{ children: React.ReactNode }> = ({
               <SquareTerminal className="h-10 w-10 text-gray-200" />
             </div>
             <div className="flex flex-col">
-              <div className="font-bold text-md">Vishal Kr. Singh</div>
+              <div className="font-bold text-md">{name}</div>
               <Typewriter
                 texts={["Full Stack Developer", "Open Source", "@vishalvoid"]}
                 speed={60}

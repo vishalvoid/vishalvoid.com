@@ -17,6 +17,7 @@
     "clsx": "^2.1.1",
     "date-fns": "^4.1.0",
     "gray-matter": "^4.0.3",
+    "lottie-react": "^2.4.1",
     "lucide-react": "^0.562.0",
     "merge": "^2.1.1",
     "motion": "^12.24.0",

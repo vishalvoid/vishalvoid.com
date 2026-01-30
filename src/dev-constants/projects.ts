@@ -4,6 +4,7 @@ export const ProjectsData: Projects[] = [
   {
     icon: "/projects/pms.svg",
     gif: "/projects/pms/pms.gif",
+    lottie: "/projects/pms/pms.json",
     title: "Project Management System",
     tagline: "Revolving Around Organized Workflow",
     description: [
@@ -44,7 +45,7 @@ export const ProjectsData: Projects[] = [
   },
   {
     icon: "/projects/rabrees.png",
-    gif: "/projects/pms/pms.gif",
+    lottie: "/projects/rabrees/rabrees.json",
     title: "Rabrees",
     tagline: "A Complete eCommerce with Admin Dashboard",
     description: [
@@ -76,6 +77,7 @@ export const ProjectsData: Projects[] = [
   {
     icon: "/projects/react-map-india.svg",
     title: "React India Map",
+    gif: "/projects/rim/rim.gif",
     tagline: "Interactive SVG India Map Component for React",
     description: [
       "Open-source NPM package with 1500+ downloads",
@@ -129,7 +131,6 @@ export const ProjectsData: Projects[] = [
   },
   {
     icon: "/projects/dark-void-theme.png",
-    gif: "/projects/pms/pms.gif",
     title: "Dark Void Theme",
     tagline: "Perfect vs-code dark theme.",
     description: [

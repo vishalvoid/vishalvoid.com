@@ -99,6 +99,7 @@ export default function RootLayout({
         />
       </head>
       <body className={font.className} suppressHydrationWarning>
+       
         <SidebarProvider>
           <SidebarWrapper>
             <ThemeProvider attribute="class" defaultTheme="light" enableSystem>
