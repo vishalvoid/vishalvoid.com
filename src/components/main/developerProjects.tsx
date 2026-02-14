@@ -135,6 +135,8 @@ const DeveloperProjects = () => {
                   </div>
                 </div>
 
+                
+
                 {/* Tech stack full width */}
                 {project.techStack && (
                   <div className="w-full mt-4">
