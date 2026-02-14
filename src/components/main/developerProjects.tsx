@@ -119,7 +119,7 @@ const DeveloperProjects = () => {
                         alt={`${project.title} preview`}
                         width={400}
                         height={220}
-                        className="w-full h-40 md:h-48 object-fit border border-border"
+                        className="h-40 md:h-48 object-cover border border-border"
                       />
                     )}
                   </div>

@@ -3,8 +3,7 @@ import type { Projects } from "@/types";
 export const ProjectsData: Projects[] = [
   {
     icon: "/projects/pms.svg",
-    gif: "/projects/pms/pms.gif",
-    lottie: "/projects/pms/pms.json",
+    gif: "/projects/pms/login_page.png",
     title: "Project Management System",
     tagline: "Revolving Around Organized Workflow",
     description: [
@@ -19,8 +18,8 @@ export const ProjectsData: Projects[] = [
       "Scalable monorepo architecture with automated testing",
       "Interactive analytics dashboards with cloud storage",
     ],
-    // liveLink: "https://orbit-pms.vercel.app",
-    repo: "https://github.com/vishalvoid/pms",
+    liveLink: "https://test.manakengineering.com",
+
     techStack: [
       { name: "NextJs", icon: "/tech-icon/nextjs.svg" },
       { name: "TypeScript", icon: "/tech-icon/typescript.svg" },
